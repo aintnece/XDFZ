@@ -1,0 +1,31 @@
+# **Solving Cubic and Quartic Equations**
+
+## 教学目标
+
+1. Understand the complex conjugate roots theorem.
+2. Understand different scenarios for roots of cubic and quartic equations.
+3. Capable of solving cubic and quartic equations when given conditions about roots are provided.
+4. Capable of using long division to divide polynomials.
+
+## 教学过程
+
+### 1. Complex Conjugate Roots Theorem
+
+- If a polynomial has real coefficients and a complex root, then its conjugate is also a root.
+- This means that if \( a + bi \) is a root, then \( a - bi \) is also a root.
+
+### 2. Roots of Cubic Equations
+
+- A cubic equation can have either 1 real root and 2 complex conjugate roots, or 3 real roots.
+- **Example 18**: learn to use long division to divide polynomials.
+
+### 3. Roots of Quartic Equations
+
+- A quartic equation can have either 4 real roots, or 2 real roots and 2 complex conjugate roots, or two pairs of complex conjugate roots.
+- **Example 19**: learn to use inspection to find roots of quartic equations (comparing coefficients).
+- **Example 20**: use long division to divide polynomials.
+
+### 4. Exercise 1l
+
+- Problem 12
+- Challenge Problem
