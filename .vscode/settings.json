@@ -3,5 +3,6 @@
         "Argand",
         "textbf",
         "textit"
-    ]
+    ],
+    "markdown.validate.enabled": false
 }
