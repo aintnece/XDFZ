@@ -1,0 +1,25 @@
+# **Locating Roots**
+
+## 教学目标
+
+- Understand from the graph that if a continuous function changes sign over an interval, then it has a root in that interval.
+
+## 教学过程
+
+### 1. Intermediate Value Theorem When $L=0$
+
+- If the function $y=f(x)$ is continuous on the close interval $[a,b]$ and $f(a)f(b)<0$, then there exists at least one root in the interval $(a,b)$.
+
+### 2. Example 1
+
+-Roots can be found in certain intervals by either inspecting the graph or calculating the function values at the endpoints of the intervals.
+
+### 3. Limitations
+
+- The function must be continuous in the interval for the theorem to apply.
+- Change of sign in the continuous function only guarantees the existence of **at least one root** in the interval, but not the number of roots.
+- Change of sign in the continuous function is **not** a necessary condition for the existence of a root in the interval.
+
+### 4. Example 2
+
+- 
