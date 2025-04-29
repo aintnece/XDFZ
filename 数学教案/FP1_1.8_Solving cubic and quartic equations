@@ -12,7 +12,7 @@
 ### 1. Complex Conjugate Roots Theorem
 
 - If a polynomial has real coefficients and a complex root, then its conjugate is also a root.
-- This means that if \( a + bi \) is a root, then \( a - bi \) is also a root.
+- This means that if $ a + bi$ is a root, then $a - bi$ is also a root.
 
 ### 2. Roots of Cubic Equations
 
