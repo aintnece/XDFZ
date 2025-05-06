@@ -1,0 +1,41 @@
+# **Interval Bisection**
+
+## Learning Objectives
+
+- Understand the concept of interval bisection for root-finding.
+- Apply the interval bisection method to find roots of functions.
+
+## Teaching Process
+
+### 1. Interval Bisection Method
+
+- Intermediate value theorem when $L=0$ indicates that a root exists in the interval $(a,b)$ if $f(a)f(b)<0$.
+- Use midpoint $c=\frac{a+b}{2}$ and check the sign of $f(c)$, determining which half of the interval contains the root, by doing so we can narrow down the interval.
+- Repeat the process until the interval is sufficiently small.
+
+### 2. Example 3
+
+- Construct $f(x)=x^2-11$ from $x=\sqrt{11}$.
+- Try out positive integers to find the root-containing interval $(3,4)$.
+- Find the midpoint $c=\frac{3+4}{2}=3.5$ and check $f(3.5)=f(3.5)=3.5^2-11=2.25>0$.
+- Since $f(3)f(3.5)<0$, the root is in the interval $(3,3.5)$.
+- Find the midpoint $c=\frac{3+3.5}{2}=3.25$ and check $f(3.25)=f(3.25)=3.25^2-11=-0.4375<0$.
+- Since $f(3.25)f(3.5)<0$, the root is in the interval $(3.25,3.5)$.
+- Find the midpoint $c=\frac{3.25+3.5}{2}=3.375$ and check $f(3.375)=f(3.375)=3.375^2-11=0.390625>0$.
+- Since $f(3.25)f(3.375)<0$, the root is in the interval $(3.25,3.375)$.
+- Find the midpoint $c=\frac{3.25+3.375}{2}=3.3125$ and check $f(3.3125)=f(3.3125)=3.3125^2-11=-0.02734375<0$.
+- Since $f(3.3125)f(3.375)<0$, the root is in the interval $(3.3125,3.375)$.
+- The problem asking for the root to 1 decimal place, we can stop here.
+- The root is approximately $3.3$.
+
+### 3. Example 4
+
+- Root exists in the interval $[2,3]$ for $f(x)=2^x-x-3$.
+- Find the midpoint $c=\frac{2+3}{2}=2.5$ and check $f(2.5)=f(2.5)=2^{2.5}-2.5-3=0.1569>0$.
+- Since $f(2)f(2.5)<0$, the root is in the interval $(2,2.5)$.
+- Find the midpoint $c=\frac{2+2.5}{2}=2.25$ and check $f(2.25)=f(2.25)=2^{2.25}-2.25-3=-0.493<0$.
+- So the first approximation of the root is $2.5$, and the second approximation is $2.25$.
+
+### Exercise: 3B
+
+- Problem 4.
