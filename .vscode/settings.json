@@ -5,5 +5,33 @@
         "textbf",
         "textit"
     ],
-    "markdown.validate.enabled": false
+    "markdown.validate.enabled": false,
+
+    "latex-workshop.latex.recipes": [
+  {"name": "xelatex", "tools": ["xelatex"]},
+  {"name": "xelatex -> bib -> xelatex*2", "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]}
+],
+
+    // 强制在 VSCode 标签页打开 PDF
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    // 启用同步TeX功能（反向搜索核心）
+    "latex-workshop.synctex.path": "synctex",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    
+    // 编译器参数必须包含 -synctex=1
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.external.viewer.path": "D:\\Program Files\\SumatraPDF\\SumatraPDF.exe",
+"latex-workshop.view.pdf.external.synctex.path": "D:\\Program Files\\SumatraPDF\\SumatraPDF.exe"
 }
