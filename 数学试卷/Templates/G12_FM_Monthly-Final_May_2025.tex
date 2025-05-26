@@ -1,5 +1,5 @@
-\documentclass[12pt]{article}
-%\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\documentclass{sbs-exam}
+
 \usepackage{ulem}
 \usepackage{array}
 \usepackage{enumitem}
@@ -12,105 +12,29 @@
 \usepackage{titling} % 提供高级标题控制
 \usepackage{lmodern} % 现代字体支持
 \usepackage{amsmath, amssymb} % 数学符号和公式支持
-% ===== 自适应页面布局 =====
-\usepackage[top=3cm,bottom=2cm,left=2cm, right=2cm, headheight=1.5cm]{geometry} % 关键参数
 
-\newcommand{\fillline}[1][0.4pt]{% 默认0.4pt线宽
-  \leavevmode\leaders\hrule height #1\hfill\kern0pt%
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
 }
-\setlength{\extrarowheight}{4pt}  % 所有表格增加行高
-\pagestyle{fancy}
-\fancyhf{}  % 清除默认页眉页脚
-\fancyhead[C]{\includegraphics[width=2cm]{SBS-logo.png}}
-% ===== 第一页页眉强制显示 =====
-% 重定义plain样式（用于首页）
-\fancypagestyle{plain}{
-  \fancyhf{}
-  \fancyhead[C]{\includegraphics[width=2cm]{SBS-logo.png}}
-}
-\thispagestyle{plain} % 强制首页样式
 
-\title{
-    \large Sino Bright School Chongqing \\
-    \vspace{0.3cm}
-    \LARGE\bfseries Monthly Exam, 2024-2025 T2 \\
-}
-\pretitle{\begin{center}\vspace*{-1.5cm}} % 标题前上移3em
-\posttitle{\end{center}\vspace*{-3cm}} % 标题后上移3em
-\date{}
+% ===== 考试元数据配置 =====
+\examtitle{Monthly Exam, 2024-2025 T2}
+\examsubject{Further Math}{May 2025}{60 Minutes}{Shi Feng}
+\MarksBreakdown{5}{10}{5}{4}{15}{2}
+
 
 \begin{document}
 
 \maketitle
 
-\begin{center}
-\begin{tabular}{ll}
-Subject: & Further Math \\
-Date: & May 2025 \\
-Time: & 60 Minutes \\
-Teacher Responsible: & Shi Feng \\
-\end{tabular}
-\end{center}
+\examnotice
 
-\begin{center}
+\makemarksheet
 
-\setlength{\fboxrule}{2pt}
-\fbox{
-    \parbox[c]{0.9\textwidth}{
+\examtools
 
-\medskip
-\noindent\textbf{IMPORTANT: Read together before beginning the exam.}
-
-\medskip
-\noindent Students must complete the assessments to the best of their ability. Any students found cheating during an exam will be given a zero and referred to the Principal for further disciplinary measures. Cheating is a serious offense.
-
-\medskip
-\noindent "Cheating" may include any of the following:
-\begin{itemize}[leftmargin=*]
-    \item Having course papers, notes, unapproved data sheets or other course-related materials in the exam room without the express permission of the subject class teacher in charge of the exam.
-    
-    \item Using or even having a cellphone or other electronic device in the exam room without the express permission of the subject class teacher in charge of the exam.
-    
-    \item Attempting to communicate, either verbally or non-verbally with other students during the exam.
-    
-    \item Having exam-related materials prior to the writing of the exam.
-\end{itemize}
-
-    }
-}
-\end{center}
-
-\vspace{0.1cm}
-
-\begin{center}
-\begin{tabular}{|p{0.5\textwidth}|p{0.35\textwidth}|}
-\hline
-\multicolumn{1}{|>{\bfseries}l|}{Mark Breakdown:} & \multirow{3}{*}{Student Name: } \\ 
-\cline{1-1}
-Part 1: Multiple Choice Questions $5pts \times 10$ & \\
-Part 2: Short Answer Questions $5pts \times 4$ & \\
-Part 3: Long Answer Questions $15pts \times 2$ & \\
-
-\cline{1-1}
-\multicolumn{1}{|l|}{Total Score: 100} & Score: \fillline \\
-\hline
-\end{tabular}
-\end{center}
-
-\vspace{0.1cm}
-
-\begin{center}
-\fbox{
-    \parbox[c]{0.9\textwidth}{
-
-\noindent\textbf{Special Instructions/Materials Allowed:}
-\begin{itemize}[leftmargin=*, itemsep=1pt]
-    \item Pen
-    \item Calculator
-\end{itemize}
-    }
-}
-\end{center}
 \newpage
 
 
