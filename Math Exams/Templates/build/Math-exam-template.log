@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  27 MAY 2025 08:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  27 MAY 2025 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/附中/数学试卷/Templates/Math-exam-template
-(d:/附中/数学试卷/Templates/Math-exam-template.tex
+**"d:/附中/Math Exams/Templates/Math-exam-template"
+(d:/附中/Math Exams/Templates/Math-exam-template.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
 (./sbs-exam.cls
@@ -264,8 +264,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count299
 \l__lipsum_a_int=\count300
 \l__lipsum_b_int=\count301
- (d:/Program Files/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-No file Math-exam-template.aux.
+ (d:/Program Files/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (build/Math-exam-template.aux)
 \openout1 = `Math-exam-template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -284,6 +283,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -373,12 +373,12 @@ L3 programming layer <2025-04-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4831 strings out of 470231
- 78500 string characters out of 5481252
- 556185 words of memory out of 5000000
- 31419 multiletter control sequences out of 15000+600000
+ 4834 strings out of 470231
+ 78609 string characters out of 5481252
+ 556176 words of memory out of 5000000
+ 31420 multiletter control sequences out of 15000+600000
  647300 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,11n,79p,281b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,11n,79p,289b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on build/Math-exam-template.pdf (3 pages).
