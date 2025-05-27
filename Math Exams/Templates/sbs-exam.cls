@@ -42,11 +42,10 @@
 }
 \thispagestyle{plain} % 强制首页样式
 
-\makeatletter
+\makeatletter % 包裹定义宏变量(关键！)
+
 % ===== 考试信息命令 =====
-\newcommand{\examtitle}[1]{
-  \gdef\@examtitle{#1} % 定义标题
-  }
+\newcommand{\examtitle}[1]{\gdef\@examtitle{#1}} % 定义标题
 
 
 \newcommand{\examsubject}[4]{
@@ -56,16 +55,13 @@
   \gdef\@teacher{#4}
 }
 
-\newcommand{\MarksBreakdown}[6]{
+\newcommand{\MarksBreakdown}[5]{
   \gdef\@MCQ{#1} % 选择题分数
   \gdef\@MCQNo{#2} % 选择题数量
   \gdef\@SAQ{#3} % 简答题分数
   \gdef\@SAQNo{#4} % 简答题数量
-  \gdef\@LAQ{#5} % 大题分数
-  \gdef\@LAQNo{#6} % 大题数量
+  \gdef\@LAQTotal{#5} % 大题总分
 }
-
-\makeatother
 
 % ===== 注意事项环境 =====
 \newenvironment{examnotice}{
@@ -111,9 +107,9 @@
 \hline
 \multicolumn{1}{|l|}{\bfseries Mark Breakdown:} & \multirow{3}{*}{Student Name: } \\ 
 \cline{1-1}
-Part 1: Multiple Choice Questions \@MCQ $\times$ \@MCQNo & \\
-Part 2: Short Answer Questions \@SAQ $\times$ \@SAQNo & \\
-Part 3: Long Answer Questions \@LAQ $\times$ \@LAQNo & \\
+Part I: Multiple Choice Questions $ \@MCQ \times \@MCQNo $ & \\
+Part II: Short Answer Questions $ \@SAQ \times \@SAQNo $ & \\
+Part III: Long Answer Questions $ \@LAQTotal $ & \\
 
 \cline{1-1}
 \multicolumn{1}{|l|}{Total Score: 100} & Score: \fillline \\
@@ -157,3 +153,4 @@ Part 3: Long Answer Questions \@LAQ $\times$ \@LAQNo & \\
     \end{tabular}
   \end{center}
 }
+\makeatother % 结束包裹定义宏变量

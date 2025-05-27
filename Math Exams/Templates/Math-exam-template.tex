@@ -1,0 +1,98 @@
+\documentclass{sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Monthly Exam, 2024-2025 T2}
+\examsubject{Further Math}{May 2025}{60 Minutes}{Shi Feng}
+\MarksBreakdown{5pts}{10}{5pts}{4}{30pts}
+
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+\section*{Part I: Multiple Choice Questions ($ \@MCQ \times \@MCQNo $)}
+\makeatother
+\begin{enumerate}
+\item
+If a root of $ f(x) = 0 $ lies in $[3, 4]$, what is the midpoint after the first iteration of interval bisection?\\
+A) 3.25\\
+B) 3.5\\
+C) 3.75\\
+D) 3.0
+
+\item 
+The formula for the first approximation $ x_1 $ using linear interpolation is:\\
+A) $ x_1 = a - \frac{f(a)(b-a)}{f(b)-f(a)} $\\
+B) $ x_1 = \frac{a + b}{2} $\\
+C) $ x_1 = a - \frac{f(a)}{f'(a)} $\\
+D) $ x_1 = \frac{f(b) - f(a)}{b - a} $
+
+\end{enumerate}
+
+\makeatletter
+\section*{Part II: Short Answer Questions ($ \text{\@SAQ} \times \@SAQNo $)}
+\makeatother
+
+\begin{enumerate}
+    
+\item After 3 iterations of interval bisection on $[3, 4]$, the interval length is \underline{\hspace{2cm}}.
+
+\end{enumerate}
+
+\makeatletter
+\section*{Part III: Long Answer Questions ($ \@LAQTotal $)}
+\makeatother
+
+\begin{enumerate}
+
+\item 
+Let $ z^6 = 1$.  
+\begin{enumerate}
+\item[(a)] Find all the solutions to the equation.
+
+\vspace{8cm} % 答题空间
+
+\item[(b)] Show each solution on an Argand diagram.
+
+\vspace{4cm} % 答题空间
+
+\item[(c)] Show that each solution lies on a circle with center $(0, 0)$ and radius $1$.
+
+\vspace{4cm} % 答题空间
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}

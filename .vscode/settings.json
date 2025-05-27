@@ -57,5 +57,9 @@
     "latex-workshop.latex.outDir": "./build",
     "files.associations": {
         "*.latexmkrc": "perl"
-    }
+    },
+    "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.synctex.gz",  // 确保包含此行
+    "*.log", "*.out", "..."
+]
 }
