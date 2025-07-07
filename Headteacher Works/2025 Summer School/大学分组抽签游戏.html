@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学地区分组抽签系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #0046ad, #0077b6);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.15) 20%, transparent 20%),
+                radial-gradient(circle, transparent 20%, rgba(255,255,255,0.15) 20%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            animation: moveBG 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @keyframes moveBG {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(60px, 60px); }
+        }
+        
+        .content {
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .lottery-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .panel-title {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .regions-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+        
+        .region-btn {
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: linear-gradient(to right, #2e86de, #3498db);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            color: white;
+            text-transform: uppercase;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .region-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #95a5a6;
+        }
+        
+        .region-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .region-btn:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+        
+        .result-display {
+            width: 100%;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        
+        #resultUniversity {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s ease;
+        }
+        
+        #resultRegion {
+            font-size: 1.4rem;
+            max-width: 90%;
+            line-height: 1.5;
+            transition: all 0.5s ease;
+            margin-bottom: 15px;
+        }
+        
+        #resultRegionCode {
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+            letter-spacing: 1px;
+            min-width: 150px;
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .draw-btn {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+        }
+        
+        .reset-btn {
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+        }
+        
+        .btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+        
+        .selected-region-display {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+            min-height: 35px;
+        }
+        
+        .drawn-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .drawn-regions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .drawn-region-card {
+            background: linear-gradient(to right, #2c3e50, #4a648c);
+            color: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .drawn-region-card-header {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            text-align: center;
+            color: #ffd166;
+        }
+        
+        .drawn-university {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 6px 10px;
+            margin-top: 6px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .drawn-university::before {
+            content: "✓";
+            margin-right: 8px;
+            font-size: 1.1rem;
+            color: #06d6a0;
+        }
+        
+        .drawn-total {
+            font-size: 1rem;
+            margin-top: 15px;
+            text-align: center;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .university-item {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .status-info {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #dee2e6;
+            text-align: center;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .status-item {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            min-width: 120px;
+        }
+        
+        .region-progress {
+            margin-top: 5px;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .region-progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            transition: width 0.5s ease;
+        }
+        
+        @keyframes lotterySpin {
+            0% { transform: rotateY(0deg) scale(0.8); }
+            50% { transform: rotateY(360deg) scale(1.1); }
+            100% { transform: rotateY(720deg) scale(1); }
+        }
+        
+        @keyframes resultAppear {
+            0% { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f39c12; }
+            50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f39c12; }
+            100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f39c12; }
+        }
+        
+        .lottery-spin {
+            animation: lotterySpin 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        .result-appear {
+            animation: resultAppear 0.8s ease-out forwards;
+        }
+        
+        .glowing-text {
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>大学地区分组抽签系统</h1>
+            <p>按国家/地区抽取大学，每个地区大学抽取后不再出现</p>
+        </div>
+        
+        <div class="content">
+            <div class="lottery-container">
+                <div class="panel-title">大学抽取区域</div>
+                
+                <div class="selected-region-display">
+                    已选择: <span id="selectedRegion">请选择区域</span>
+                </div>
+                
+                <div class="regions-container" id="regionsContainer">
+                    <!-- 区域按钮将通过JS动态生成 -->
+                </div>
+                
+                <div class="result-display" id="resultDisplay">
+                    <div id="resultUniversity">等待抽取结果...</div>
+                    <div id="resultRegion">
+                        <span id="resultRegionName"></span>
+                        <span id="resultRegionCode"></span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="drawButton" class="btn draw-btn" disabled>抽取大学</button>
+                    <button id="resetButton" class="btn reset-btn">全部重置</button>
+                </div>
+                
+                <div class="status-info">
+                    <div class="status-item">
+                        已抽取: <span id="drawnCount">0</span> 所
+                    </div>
+                    <div class="status-item">
+                        剩余: <span id="remainingCount">48</span> 所
+                    </div>
+                    <div class="status-item">
+                        进度: <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="drawn-container">
+                <div class="panel-title">已抽取大学</div>
+                
+                <div class="drawn-regions" id="drawnRegions">
+                    <!-- 已抽取大学将通过JS动态生成 -->
+                </div>
+                
+                <div class="drawn-total">
+                    已抽取大学总数: <span id="totalDrawn">0</span> 所
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 大学地区分组数据（按国家/地区分组）
+            const universityRegions = [
+                {
+                    id: "us",
+                    name: "美国大学",
+                    code: "US",
+                    universities: [
+                        "普林斯顿大学", "麻省理工学院", "哈佛大学", "斯坦福大学", "耶鲁大学",
+                        "宾夕法尼亚大学", "加州理工学院", "杜克大学", "布朗大学", "约翰斯·霍普金斯大学",
+                        "西北大学", "哥伦比亚大学", "康奈尔大学", "芝加哥大学", "加州大学系统",
+                        "莱斯大学", "达特茅斯学院", "范德堡大学", "圣母大学", "密歇根大学安娜堡分校",
+                        "北卡罗来纳大学教堂山分校", "华盛顿大学圣路易斯分校", "卡内基梅隆大学", "纽约大学",
+                        "弗吉尼亚大学", "佛罗里达大学"
+                    ],
+                    drawn: [] // 已抽取的大学
+                },
+                {
+                    id: "ca",
+                    name: "加拿大大学",
+                    code: "CA",
+                    universities: [
+                        "多伦多大学", "不列颠哥伦比亚大学", "麦吉尔大学", "阿尔伯塔大学", "麦克马斯特大学"
+                    ],
+                    drawn: []
+                },
+                {
+                    id: "sg",
+                    name: "新加坡大学",
+                    code: "SG",
+                    universities: [
+                        "新加坡国立大学", "南洋理工大学", "新加坡管理大学"
+                    ],
+                    drawn: []
+                },
+                {
+                    id: "hk",
+                    name: "香港地区大学",
+                    code: "HK",
+                    universities: [
+                        "香港大学", "香港中文大学", "香港科技大学", "香港城市大学", "香港理工大学"
+                    ],
+                    drawn: []
+                },
+                {
+                    id: "au",
+                    name: "澳大利亚大学",
+                    code: "AU",
+                    universities: [
+                        "澳大利亚国立大学", "墨尔本大学", "悉尼大学", "昆士兰大学", "新南威尔士大学"
+                    ],
+                    drawn: []
+                },
+                {
+                    id: "uk",
+                    name: "英国大学",
+                    code: "UK",
+                    universities: [
+                        "牛津大学", "剑桥大学", "帝国理工学院", "伦敦大学学院", "爱丁堡大学",
+                        "曼彻斯特大学", "伦敦国王学院", "伦敦政治经济学院", "华威大学", "布里斯托大学"
+                    ],
+                    drawn: []
+                }
+            ];
+            
+            // DOM元素
+            const drawButton = document.getElementById('drawButton');
+            const resetButton = document.getElementById('resetButton');
+            const resultDisplay = document.getElementById('resultDisplay');
+            const resultUniversity = document.getElementById('resultUniversity');
+            const resultRegionName = document.getElementById('resultRegionName');
+            const resultRegionCode = document.getElementById('resultRegionCode');
+            const regionsContainer = document.getElementById('regionsContainer');
+            const drawnRegionsContainer = document.getElementById('drawnRegions');
+            const selectedRegionDisplay = document.getElementById('selectedRegion');
+            const drawnCountElement = document.getElementById('drawnCount');
+            const remainingCountElement = document.getElementById('remainingCount');
+            const totalDrawnElement = document.getElementById('totalDrawn');
+            const progressPercentElement = document.getElementById('progressPercent');
+            
+            // 状态变量
+            let selectedRegion = null;
+            let totalUniversities = 0;
+            let drawnUniversities = 0;
+            
+            // 初始化：计算大学总数
+            universityRegions.forEach(region => {
+                totalUniversities += region.universities.length;
+            });
+            remainingCountElement.textContent = totalUniversities;
+            
+            // 创建区域按钮
+            function initRegionButtons() {
+                regionsContainer.innerHTML = '';
+                
+                universityRegions.forEach(region => {
+                    const button = document.createElement('button');
+                    button.className = 'region-btn';
+                    button.dataset.id = region.id;
+                    button.innerHTML = `
+                        ${region.name}
+                        <div class="region-progress">
+                            <div class="region-progress-bar" style="width: 0%"></div>
+                        </div>
+                    `;
+                    button.addEventListener('click', () => selectRegion(region.id));
+                    regionsContainer.appendChild(button);
+                    
+                    // 如果该地区没有大学可抽了，禁用按钮
+                    if (region.universities.length === region.drawn.length) {
+                        button.disabled = true;
+                    }
+                });
+            }
+            
+            // 选择区域
+            function selectRegion(regionId) {
+                selectedRegion = universityRegions.find(r => r.id === regionId);
+                selectedRegionDisplay.textContent = selectedRegion.name;
+                drawButton.disabled = false;
+                
+                // 高亮显示当前选中的区域
+                const buttons = document.querySelectorAll('.region-btn');
+                buttons.forEach(btn => {
+                    btn.style.boxShadow = btn.dataset.id === regionId ? 
+                        '0 0 15px rgba(46, 134, 222, 0.8)' : '0 4px 10px rgba(0, 0, 0, 0.15)';
+                });
+            }
+            
+            // 更新地区进度
+            function updateRegionProgress() {
+                universityRegions.forEach(region => {
+                    const button = document.querySelector(`.region-btn[data-id="${region.id}"]`);
+                    if (button) {
+                        const progress = region.drawn.length / region.universities.length * 100;
+                        const progressBar = button.querySelector('.region-progress-bar');
+                        if (progressBar) {
+                            progressBar.style.width = `${progress}%`;
+                        }
+                        
+                        // 如果该地区没有大学可抽了，禁用按钮
+                        if (region.universities.length === region.drawn.length) {
+                            button.disabled = true;
+                            button.querySelector('.region-progress-bar').style.background = '#95a5a6';
+                        }
+                    }
+                });
+            }
+            
+            // 更新已抽取大学显示
+            function updateDrawnDisplay() {
+                drawnRegionsContainer.innerHTML = '';
+                
+                // 只显示有已抽取大学的地区
+                const regionsWithDrawn = universityRegions.filter(region => region.drawn.length > 0);
+                
+                if (regionsWithDrawn.length === 0) {
+                    drawnRegionsContainer.innerHTML = '<div style="text-align: center; grid-column: 1/-1; padding: 20px;">暂无抽取大学</div>';
+                    return;
+                }
+                
+                regionsWithDrawn.forEach(region => {
+                    const card = document.createElement('div');
+                    card.className = 'drawn-region-card';
+                    card.innerHTML = `
+                        <div class="drawn-region-card-header">${region.name}</div>
+                        ${region.drawn.map(uni => 
+                            `<div class="drawn-university">${uni}</div>`
+                        ).join('')}
+                    `;
+                    drawnRegionsContainer.appendChild(card);
+                });
+            }
+            
+            // 抽取大学逻辑
+            function drawUniversity() {
+                if (!selectedRegion) {
+                    alert('请先选择区域！');
+                    return;
+                }
+                
+                // 检查该地区是否还有可抽的大学
+                const remainingUniversities = selectedRegion.universities.filter(uni => 
+                    !selectedRegion.drawn.includes(uni)
+                );
+                
+                if (remainingUniversities.length === 0) {
+                    alert('该地区大学已全部抽取！');
+                    return;
+                }
+                
+                // 动画效果
+                resultDisplay.classList.add('lottery-spin');
+                resultUniversity.textContent = "抽取中...";
+                resultRegionName.textContent = "";
+                resultRegionCode.textContent = "";
+                
+                // 0.5秒后显示结果
+                setTimeout(() => {
+                    // 随机选择大学
+                    const randomIndex = Math.floor(Math.random() * remainingUniversities.length);
+                    const drawnUniversity = remainingUniversities[randomIndex];
+                    
+                    // 添加到已抽取列表
+                    selectedRegion.drawn.push(drawnUniversity);
+                    drawnUniversities++;
+                    
+                    // 更新显示
+                    resultDisplay.classList.remove('lottery-spin');
+                    resultDisplay.classList.add('result-appear');
+                    resultUniversity.textContent = drawnUniversity;
+                    resultUniversity.classList.add('glowing-text');
+                    resultRegionName.textContent = selectedRegion.name;
+                    resultRegionCode.textContent = selectedRegion.code;
+                    
+                    // 更新计数
+                    drawnCountElement.textContent = drawnUniversities;
+                    remainingCountElement.textContent = totalUniversities - drawnUniversities;
+                    totalDrawnElement.textContent = drawnUniversities;
+                    
+                    // 更新进度百分比
+                    const progressPercent = Math.round((drawnUniversities / totalUniversities) * 100);
+                    progressPercentElement.textContent = `${progressPercent}%`;
+                    
+                    // 更新其他视图
+                    updateRegionProgress();
+                    updateDrawnDisplay();
+                    
+                    // 如果有其他区域可选，取消当前区域选择
+                    const hasOtherRegions = universityRegions.some(r => 
+                        r.id !== selectedRegion.id && r.drawn.length < r.universities.length
+                    );
+                    
+                    if (hasOtherRegions) {
+                        selectedRegion = null;
+                        selectedRegionDisplay.textContent = "请选择区域";
+                        drawButton.disabled = true;
+                        
+                        // 移除所有按钮的高亮
+                        const buttons = document.querySelectorAll('.region-btn');
+                        buttons.forEach(btn => {
+                            btn.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.15)';
+                        });
+                    }
+                    
+                }, 800);
+            }
+            
+            // 重置游戏
+            function resetGame() {
+                // 重置所有地区
+                universityRegions.forEach(region => {
+                    region.drawn = [];
+                });
+                
+                // 重置UI
+                resultUniversity.textContent = "等待抽取结果...";
+                resultUniversity.classList.remove('glowing-text');
+                resultRegionName.textContent = "";
+                resultRegionCode.textContent = "";
+                selectedRegionDisplay.textContent = "请选择区域";
+                resultDisplay.classList.remove('lottery-spin', 'result-appear');
+                
+                drawnUniversities = 0;
+                drawnCountElement.textContent = "0";
+                remainingCountElement.textContent = totalUniversities;
+                totalDrawnElement.textContent = "0";
+                progressPercentElement.textContent = "0%";
+                selectedRegion = null;
+                
+                drawButton.disabled = true;
+                
+                // 更新所有视图
+                initRegionButtons();
+                updateRegionProgress();
+                updateDrawnDisplay();
+            }
+            
+            // 事件监听
+            drawButton.addEventListener('click', drawUniversity);
+            resetButton.addEventListener('click', resetGame);
+            
+            // 初始化
+            initRegionButtons();
+            updateDrawnDisplay();
+        });
+    </script>
+</body>
+</html>
