@@ -79,7 +79,7 @@
 \medskip
 \noindent "Cheating" may include any of the following:
 \begin{itemize}[leftmargin=*]
-    \item Having course papers, notes, unapproved data sheets or other course-related materials in the exam room without the express permission of the subject class teacher in charge of the exam.
+    \item Having course papers, notes, unapproved data sheets or other course-related materials in the exam room without the expressed permission of the subject class teacher in charge of the exam.
     
     \item Using or even having a cellphone or other electronic device in the exam room without the express permission of the subject class teacher in charge of the exam.
     
@@ -127,7 +127,6 @@ Part III: Long Answer Questions $ \@LAQTotal $ & \\
 \noindent\textbf{Special Instructions/Materials Allowed:}
 \begin{itemize}[leftmargin=*, itemsep=1pt]
     \item Pen
-    \item Calculator
 \end{itemize}
     }
 }
