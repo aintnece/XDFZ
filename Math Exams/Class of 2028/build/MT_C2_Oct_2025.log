@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  9 OCT 2025 15:00
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  9 OCT 2025 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/附中/Math Exams/Class of 2028/MT_C1_Oct_2025"
-(d:/附中/Math Exams/Class of 2028/MT_C1_Oct_2025.tex
+**"d:/附中/Math Exams/Class of 2028/MT_C2_Oct_2025"
+(d:/附中/Math Exams/Class of 2028/MT_C2_Oct_2025.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
 (../Templates/sbs-exam.cls
@@ -337,8 +337,9 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count309
 \l__lipsum_a_int=\count310
 \l__lipsum_b_int=\count311
- (d:/Program Files/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (build/MT_C1_Oct_2025.aux)
-\openout1 = `MT_C1_Oct_2025.aux'.
+ (d:/Program Files/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+No file MT_C2_Oct_2025.aux.
+\openout1 = `MT_C2_Oct_2025.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
@@ -356,7 +357,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -427,25 +427,25 @@ File: ../Assets/SBS-logo.png Graphic file (type bmp)
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-[]\TU/lmr/m/n/12 Two distinct
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-[]\TU/lmr/m/n/12 One repeated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-[]\TU/lmr/m/n/12 A maximum
- []
-
-
 
 File: ../Assets/SBS-logo.png Graphic file (type bmp)
 <../Assets/SBS-logo.png>
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]\TU/lmr/m/n/12 Two distinct
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+[]\TU/lmr/m/n/12 One repeated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+[]\TU/lmr/m/n/12 A maximum
+ []
+
+
 
 File: ../Assets/SBS-logo.png Graphic file (type bmp)
 <../Assets/SBS-logo.png>
@@ -457,19 +457,19 @@ File: ../Assets/SBS-logo.png Graphic file (type bmp)
 
 File: ../Assets/SBS-logo.png Graphic file (type bmp)
 <../Assets/SBS-logo.png>
-[5] (build/MT_C1_Oct_2025.aux)
+[5] (build/MT_C2_Oct_2025.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4971 strings out of 470231
- 81105 string characters out of 5481252
- 572332 words of memory out of 5000000
- 31553 multiletter control sequences out of 15000+600000
+ 4966 strings out of 470231
+ 80964 string characters out of 5481252
+ 570341 words of memory out of 5000000
+ 31550 multiletter control sequences out of 15000+600000
  639271 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,12n,79p,289b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/MT_C1_Oct_2025.pdf (5 pages).
+Output written on build/MT_C2_Oct_2025.pdf (5 pages).
