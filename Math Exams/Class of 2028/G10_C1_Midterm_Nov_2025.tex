@@ -1,0 +1,203 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{caption} % 图表标题支持
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+  {./midterm-g10-c1-fall-2025/} % 本试卷资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Midterm Exam, 2025-2026 T1}
+\examsubject{G10 C1 Math}{Nov 2025}{90 Minutes}{Shi Feng}
+\MarksBreakdown{}{}{}{}{73 \text{ Marks}}{73 \text{ Marks}}
+
+% 自定义命令用于处理记分内容
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+\section*{Questions}
+
+\begin{enumerate}
+\item % Q1
+\begin{enumerate}
+\item Given that $3^{-1.5}=a\sqrt{3}$ find the exact value of $a$. \imarks{2}
+\item Simplify fully $\frac{(2x^{2})^{3}}{4x^{2}}$. \imarks{2}
+\end{enumerate}
+\totalmarks{5}
+
+\vspace{3cm}
+
+\item % Q2
+In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable. \\
+The curve C has equation
+$$y=\frac{2}{x}-k$$
+where $k$ is a positive constant.
+\begin{enumerate}
+\item Sketch the graph of C. \\
+Show on your sketch \\
+- the coordinates of any points of intersection of C with the coordinate axes \\
+- the equation of the horizontal asymptote to C \\
+stating each in terms of $k$. \imarks{3} \\
+The line $l$ has equation $y=-kx-6$
+\item Given that $l$ intersects C at 2 distinct points, find the range of possible values of $k$. \imarks{5}
+\end{enumerate}
+\totalmarks{8}
+
+\vspace{3cm}
+
+\item % Q3
+The equation
+$$\frac{3}{x}+5=-2x+c$$
+where $c$ is a constant, has no real roots. \\
+Find the range of possible values of $c$. \imarks{7}
+
+\vspace{3cm}
+
+\item % Q4
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{figure 1.png}
+\caption*{Figure 1}
+\end{figure}
+Figure 1 shows a line $l_{1}$ with equation $2y=x$ and a curve C with equation
+$$y=2x-\frac{1}{8}x^{2}$$
+The region R, shown unshaded in Figure 1, is bounded by the line $l_{1}$, the curve C and a line $l_{2}$. Given that $l_{2}$ is parallel to the y-axis and passes through the intercept of C with the positive x-axis, identify the inequalities that define R. \imarks{3}
+
+\vspace{5cm}
+
+
+\item % Q5
+\begin{enumerate}
+\item On the same axes, sketch the graphs of $y=x+2$ and $y=x^{2}-x-6$ showing the coordinates of all points at which each graph crosses the coordinate axes. \imarks{4}
+\item On your sketch, show, by shading, the region R defined by the inequalities
+$$y<x+2 \text{ and } y>x^{2}-x-6$$ \imarks{1}
+\item Hence, or otherwise, find the set of values of $x$ for which $x^{2}-2x-8<0$ \imarks{3}
+\end{enumerate}
+\totalmarks{8}
+
+\vspace{5cm}
+
+\item % Q6
+
+Solve the simultaneous equations
+$$\begin{array}{l} y+4x+1=0 \\ y^{2}+5x^{2}+2x=0 \end{array}$$ \imarks{6}
+
+\vspace{5cm}
+
+\item % Q7
+
+A curve has equation
+$$y=\frac{x^{3}}{6}+4\sqrt{x}-15 \quad x\geqslant 0$$
+\begin{enumerate}
+\item Find $\frac{dy}{dx}$, giving the answer in simplest form. \imarks{3}
+\item The point $P\left(4,\frac{11}{3}\right)$ lies on the curve. Find the equation of the normal to the curve at P. Write your answer in the form $ax+by+c=0$, where $a$, $b$ and $c$ are integers to be found. \imarks{4}
+\end{enumerate}
+\totalmarks{7}
+
+\vspace{5cm}
+
+\item % Q8
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{figure 2.png}
+\caption*{Figure 2}
+\end{figure}
+Figure 2 shows a plot of the curve with equation $y=\sin\theta$, $0\leq\theta\leq 360^{\circ}$
+\begin{enumerate}
+\item State the coordinates of the minimum point on the curve with equation
+$$y=4\sin\theta, \quad 0\leq\theta\leq 360^{\circ}$$
+\item A copy of Figure 3, called Diagram 1, is shown here. \\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{figure 3.png}
+\caption*{Diagram 1}
+\end{figure}
+On Diagram 1, sketch and label the curves
+\begin{enumerate}
+\item $y=1+\sin\theta, \quad 0\leq\theta\leq 360^{\circ}$ \imarks{1}
+\item $y=\tan\theta, \quad 0\leq\theta\leq 360^{\circ}$ \imarks{1}
+\end{enumerate}
+\item Hence find the number of solutions of the equation
+\begin{enumerate}
+\item $\tan\theta=1+\sin\theta$ that lie in the region $0\leq\theta\leq 2160^{\circ}$ \imarks{1.5}
+\item $\tan\theta=1+\sin\theta$ that lie in the region $0\leq\theta\leq 1980^{\circ}$ \imarks{1.5}
+\end{enumerate}
+\end{enumerate}
+\totalmarks{7}
+
+\vspace{4cm}
+
+\item % Q9
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{figure 4.png}
+\caption*{Figure 3}
+\end{figure}
+The shape ABCDA consists of a sector ABCOA of a circle, centre O, joined to a triangle AOD, as shown in Figure 3. \\
+The point D lies on OC. \\
+The radius of the circle is $6~cm$, length AD is $5~cm$ and angle AOD is 0.7 radians.
+\begin{enumerate}
+\item Find the area of the sector ABCOA, giving your answer to one decimal place. \imarks{3}
+\item Given angle ADO is obtuse, find the size of angle ADO, giving your answer to 3 decimal places. \imarks{3}
+\item Hence find the perimeter of shape ABCDA, giving your answer to one decimal place. \imarks{4}
+\end{enumerate}
+\totalmarks{10}
+
+\vspace{4cm}
+
+\item % Q10
+\begin{enumerate}
+\item On Diagram 2 sketch the graphs of
+\begin{enumerate}
+\item $y=x(3-x)$ \imarks{2}
+\item $y=x(x-2)(5-x)$ \imarks{2}
+\end{enumerate}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{figure 5.png}
+\caption*{Diagram 2}
+\end{figure}
+showing clearly the coordinates of the points where the curves cross the coordinate axes.
+\item Show that the $x$ coordinates of the points of intersection of
+$$y=x(3-x) \text{ and } y=x(x-2)(5-x)$$
+are given by the solutions to the equation $x(x^{2}-8x+13)=0$ \imarks{3}
+\item The point P lies on both curves. Given that P lies in the first quadrant, find, using algebra and showing your working, the exact coordinates of P. \imarks{5}
+\end{enumerate}
+\totalmarks{12}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,268 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{caption} % 图表标题支持
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+  {./midterm-g10-c1-fall-2025/} % 本试卷资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Midterm Exam, 2025-2026 T1}
+\examsubject{G10 C2 Math}{Nov 2025}{90 Minutes}{Shi Feng}
+\MarksBreakdown{2 \text{ Marks}}{10}{2 \text{ Marks}}{20}{29 \text{ Marks}}{99 \text{ Marks}}
+
+% 自定义命令用于处理记分内容
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+
+\section*{Multiple Choice Questions (10 questions, 2 marks each)}
+Circle the correct answer for each question.
+
+\begin{enumerate}
+\item Simplify $\dfrac{x^3 \times x^4}{x^{-2}}$
+\begin{enumerate}
+\item $x^5$
+\item $x^9$ 
+\item $x^{-1}$
+\item $x^{24}$
+\end{enumerate}
+
+\item Which expression is equivalent to $(2x-3)(x+4)$?
+\begin{enumerate}
+\item $2x^2+5x-12$
+\item $2x^2+11x-12$
+\item $2x^2-5x-12$
+\item $2x^2-11x-12$
+\end{enumerate}
+
+\item Factorize completely: $x^3-4x$
+\begin{enumerate}
+\item $x(x-2)(x+2)$
+\item $x(x-4)$
+\item $(x^2-2)(x+2)$
+\item $x(x-2)^2$
+\end{enumerate}
+
+\item Simplify $\sqrt{75} + 2\sqrt{12} - \sqrt{27}$
+\begin{enumerate}
+\item $4\sqrt{3}$
+\item $6\sqrt{3}$
+\item $8\sqrt{3}$
+\item $10\sqrt{3}$
+\end{enumerate}
+
+\item Solve the equation: $x^2-5x-14=0$
+\begin{enumerate}
+\item $x=2,7$
+\item $x=-2,7$
+\item $x=2,-7$
+\item $x=-2,-7$
+\end{enumerate}
+
+\item The quadratic function $f(x)=2x^2-8x+5$ can be written in completed square form as:
+\begin{enumerate}
+\item $2(x-2)^2-3$
+\item $2(x-4)^2-11$
+\item $(x-4)^2-11$
+\item $2(x-2)^2+13$
+\end{enumerate}
+
+\item Solve the simultaneous equations: 
+$$y=2x-1$$
+$$x^2+y^2=10$$
+\begin{enumerate}
+\item $(1,1)$ and $(-3,-7)$
+\item $(1,1)$ and $(3,5)$
+\item $(-1,-3)$ and $(3,5)$
+\item $(2,3)$ and $(-2,-5)$
+\end{enumerate}
+
+\item Find the solution set for the inequality: $x^2-3x-10<0$
+\begin{enumerate}
+\item $\{x:-2<x<5\}$
+\item $\{x:x<-2\}\cup\{x:x>5\}$
+\item $\{x:-5<x<2\}$
+\item $\{x:x<-5\}\cup\{x:x>2\}$
+\end{enumerate}
+
+\item The graph of $y=x^2$ is translated by the vector $\begin{pmatrix} 2 \\ -3 \end{pmatrix}$. What is the equation of the transformed graph?
+\begin{enumerate}
+\item $y=(x+2)^2-3$
+\item $y=(x-2)^2-3$
+\item $y=(x+3)^2+2$
+\item $y=(x-3)^2+2$
+\end{enumerate}
+
+\item A straight line passes through points $(1,4)$ and $(3,10)$. What is its gradient?
+\begin{enumerate}
+\item 2
+\item 3
+\item 4
+\item 6
+\end{enumerate}
+\end{enumerate}
+
+\section*{Short Answer Questions (20 questions, 2 marks each)}
+
+\subsection*{True/False}
+State whether each statement is True or False.
+
+\begin{enumerate}
+\setcounter{enumi}{10}
+\item $a^m \times a^n = a^{m+n}$ for all real values of $a$, $m$, and $n$.\hfill True \quad False
+
+\item The expression $\frac{1}{\sqrt{3}}$ can be rationalized to $\frac{\sqrt{3}}{3}$.\hfill True \quad False
+
+\item The solutions to $x^2+4x+4=0$ are $x=-2$ (repeated root).\hfill True \quad False
+
+\item The discriminant of $2x^2-5x+3=0$ is positive.\hfill True \quad False
+
+\item The inequality $|x-2|<5$ is equivalent to $-3<x<7$.\hfill True \quad False
+
+\item The graphs of $y=\frac{1}{x}$ and $y=\frac{2}{x}$ have the same asymptotes.\hfill True \quad False
+
+\item The line $y=3x-2$ is perpendicular to $y=-\frac{1}{3}x+4$.\hfill True \quad False
+
+\item The distance between points $(1,2)$ and $(4,6)$ is 5 units.\hfill True \quad False
+
+\item In any triangle, $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$ (Sine Rule).\hfill True \quad False
+
+\item $180^\circ$ is equal to $\pi$ radians.\hfill True \quad False
+\end{enumerate}
+
+\subsection*{Fill in the Blank Questions}
+Complete each statement.
+
+\begin{enumerate}
+\setcounter{enumi}{20}
+\item Simplify: $8^{\frac{2}{3}} = $ \underline{\hspace{2cm}}
+
+\item Expand and simplify: $(x-3)^2 = $ \underline{\hspace{2cm}}
+
+\item Factorize completely: $x^2-5x-24 = $ \underline{\hspace{2cm}}
+
+\item Rationalize the denominator: $\frac{3}{\sqrt{5}} = $ \underline{\hspace{2cm}}
+
+\item Solve: $x^2-6x+8=0$, $x = $ \underline{\hspace{2cm}}
+
+\item Write $x^2+8x+1$ in completed square form: \underline{\hspace{2cm}}
+
+\item Solve the inequality: $2x-5>7$, $x > $ \underline{\hspace{2cm}}
+
+\item Find the gradient of the line perpendicular to $y=2x+5$: \underline{\hspace{2cm}}
+
+\item The area of a triangle with sides 5 cm, 6 cm, and 7 cm is \underline{\hspace{2cm}} cm$^2$
+
+\item Convert $60^\circ$ to radians: \underline{\hspace{2cm}} radians
+\end{enumerate}
+
+
+\section*{Long Answer Questions}
+
+\begin{enumerate}
+
+\item % Q8
+Figure 1 shows a plot of the curve with equation $y=\sin\theta$, $0\leq\theta\leq 360^{\circ}$
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{figure 2.png}
+\caption*{Figure 1}
+\end{figure}
+\begin{enumerate}
+\item State the coordinates of the minimum point on the curve with equation
+$$y=4\sin\theta, \quad 0\leq\theta\leq 360^{\circ}$$ \imarks{2}
+\item A copy of Figure 1, called Diagram 1, is shown here. \\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{figure 3.png}
+\caption*{Diagram 1}
+\end{figure}
+On Diagram 1, sketch and label the curves
+\begin{enumerate}
+\item $y=1+\sin\theta, \quad 0\leq\theta\leq 360^{\circ}$ \imarks{1}
+\item $y=\tan\theta, \quad 0\leq\theta\leq 360^{\circ}$ \imarks{1}
+\end{enumerate}
+\item Hence find the number of solutions of the equation
+\begin{enumerate}
+\item $\tan\theta=1+\sin\theta$ that lie in the region $0\leq\theta\leq 2160^{\circ}$ \imarks{1.5}
+\item $\tan\theta=1+\sin\theta$ that lie in the region $0\leq\theta\leq 1980^{\circ}$ \imarks{1.5}
+\end{enumerate}
+\end{enumerate}
+\totalmarks{7}
+
+\vspace{10cm}
+
+\item % Q9
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{figure 4.png}
+\caption*{Figure 2}
+\end{figure}
+The shape ABCDA consists of a sector ABCOA of a circle, centre O, joined to a triangle AOD, as shown in Figure 2. \\
+The point D lies on OC. \\
+The radius of the circle is $6~cm$, length AD is $5~cm$ and angle AOD is 0.7 radians.
+\begin{enumerate}
+\item Find the area of the sector ABCOA, giving your answer to one decimal place. \imarks{3}
+\item Given angle ADO is obtuse, find the size of angle ADO, giving your answer to 3 decimal places. \imarks{3}
+\item Hence find the perimeter of shape ABCDA, giving your answer to one decimal place. \imarks{4}
+\end{enumerate}
+\totalmarks{10}
+
+\vspace{10cm}
+
+\item % Q10
+\begin{enumerate}
+\item On Diagram 2 sketch the graphs of
+\begin{enumerate}
+\item $y=x(3-x)$ \imarks{2}
+\item $y=x(x-2)(5-x)$ \imarks{2}
+\end{enumerate}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{figure 5.png}
+\caption*{Diagram 2}
+\end{figure}
+showing clearly the coordinates of the points where the curves cross the coordinate axes.
+\item Show that the $x$ coordinates of the points of intersection of
+$$y=x(3-x) \text{ and } y=x(x-2)(5-x)$$
+are given by the solutions to the equation $x(x^{2}-8x+13)=0$ \imarks{3}
+\item The point P lies on both curves. Given that P lies in the first quadrant, find, using algebra and showing your working, the exact coordinates of P. \imarks{5}
+\end{enumerate}
+\totalmarks{12}
+
+\end{enumerate}
+
+\end{document}

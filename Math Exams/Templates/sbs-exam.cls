@@ -55,12 +55,13 @@
   \gdef\@teacher{#4}
 }
 
-\newcommand{\MarksBreakdown}[5]{
+\newcommand{\MarksBreakdown}[6]{
   \gdef\@MCQ{#1} % 选择题分数
   \gdef\@MCQNo{#2} % 选择题数量
   \gdef\@SAQ{#3} % 简答题分数
   \gdef\@SAQNo{#4} % 简答题数量
   \gdef\@LAQTotal{#5} % 大题总分
+  \gdef\@TotalMarks{#6} % 总分计算
 }
 
 % ===== 注意事项环境 =====
@@ -112,7 +113,7 @@ Part II: Short Answer Questions $ \@SAQ \times \@SAQNo $ & \\
 Part III: Long Answer Questions $ \@LAQTotal $ & \\
 
 \cline{1-1}
-\multicolumn{1}{|l|}{Total Score: 100} & Score: \fillline \\
+\multicolumn{1}{|l|}{Total Marks: \@TotalMarks} & Score: \fillline \\
 \hline
 \end{tabular}
 \end{center}
@@ -126,7 +127,7 @@ Part III: Long Answer Questions $ \@LAQTotal $ & \\
 
 \noindent\textbf{Special Instructions/Materials Allowed:}
 \begin{itemize}[leftmargin=*, itemsep=1pt]
-    \item Pen
+    \item Pen, Calculator
 \end{itemize}
     }
 }
@@ -145,7 +146,7 @@ Part III: Long Answer Questions $ \@LAQTotal $ & \\
     {\LARGE\bfseries \@examtitle \\}
     \vspace{1cm}
     \begin{tabular}{ll}
-      Subject: & \@subject \\
+      Class \& Subject: & \@subject \\
       Date: & \@examdate \\
       Time: & \@duration \\
       Teacher: & \@teacher \\
