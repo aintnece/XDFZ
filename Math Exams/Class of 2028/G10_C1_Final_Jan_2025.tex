@@ -1,0 +1,242 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{caption} % 图表标题支持
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+  {./Final-G10-C1-Fall-2025/} % 本试卷资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Final Exam, 2025-2026 T1}
+\examsubject{G10 C1 Math}{Jan 2026}{90 Minutes}{Shi Feng}
+\MarksBreakdown{}{}{}{}{100 \text{ Marks}}{100 \text{ Marks}}
+
+% 自定义命令用于处理记分内容
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+\section*{Questions}
+
+\begin{enumerate}
+
+\item % Q1
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{Figure_1.png}
+\caption*{Figure 1}
+\end{figure}
+
+Figure 1 shows a plot of part of the curve with equation \( y = \cos 2x \) with \( x \) being measured in radians.
+
+The point \( P \), shown on Figure 1, is a minimum point on the curve.
+
+\begin{enumerate}
+    \item[(a)] State the coordinates of \( P \). \imarks{3}
+    
+    \item[(b)] Sketch the curve with equation \( y = \sin x \). \imarks{3}
+    
+    \item[(c)] Hence, or otherwise, deduce the number of solutions of the equation
+    \begin{enumerate}
+        \item[(i)] \( \cos 2x = \sin x \) that lie in the region \( 0 \leq x \leq 20\pi \)
+        
+        \item[(ii)] \( \cos 2x = \sin x \) that lie in the region \( 0 \leq x \leq 21\pi \)
+    \end{enumerate}
+    \imarks{4}
+\end{enumerate}
+
+
+\vspace{9cm}
+
+\item % Q2
+    A curve has equation
+    \begin{equation*}
+        y = 2x^3 - 5x^2 - \frac{3}{2x} + 7 \quad x > 0
+    \end{equation*}
+    \begin{enumerate}[leftmargin=*, label=\textbf{\alph*.}]
+        \item[(a)] Find, in simplest form, $\frac{dy}{dx}$ \imarks{5}
+        
+        The point $P$ lies on the curve and has $x$ coordinate $\frac{1}{2}$
+        
+        \item[(b)] Find an equation of the normal to the curve at $P$, writing your answer in the form $ax + by + c = 0$, where $a$, $b$ and $c$ are integers to be found. \imarks{5}
+    \end{enumerate}
+
+\vspace{8cm}
+
+\item % Q3
+\begin{enumerate}
+        \item[(a)] Find the equation of the tangent to the curve with equation
+        \[
+        y = \frac{1}{4}x^3 - 8x^{-\frac{1}{2}}
+        \]
+        at the point \( P(4, 12) \). Give your answer in the form \( ax + by + c = 0 \) where \( a \), \( b \) and \( c \) are integers. \imarks{5}
+        
+        The curve with equation \( y = f(x) \) also passes through the point \( P(4, 12) \). Given that
+        \[
+        f'(x) = \frac{1}{4}x^3 - 8x^{-\frac{1}{2}}
+        \]
+        
+        \item[(b)] Find \( f(x) \) giving the coefficients in simplest form. \imarks{5}
+    \end{enumerate}
+
+\vspace{8cm}
+
+\item % Q4
+
+Given the function \( f(x) = (x - 3)(3x^2 + x + a) - 35 \) where \( a \) is a constant:
+          \begin{enumerate}
+              \item State the remainder when \( f(x) \) is divided by \( (x - 3) \). \imarks{2}
+              \item Given that \( (3x - 2) \) is a factor of \( f(x) \), show that \( a = -17 \). \imarks{3}
+              \item Using algebra and showing each step of your working, fully factorise \( f(x) \). \imarks{5}
+          \end{enumerate}
+
+\vspace{8cm}
+
+
+\item % Q5
+\begin{enumerate}
+    \item[(i)] Use a counter example to show that the following statement is false:
+    \begin{equation*}
+        \text{``}n^2 + 3n + 1 \text{ is prime for all } n \in \mathbb{N}\text{"}
+    \end{equation*}\imarks{4}
+    
+    \item[(ii)] Use algebra to prove by exhaustion that for all $n \in \mathbb{N}$:
+    \[
+    \text{``}n^2 - 2 \text{ is not a multiple of } 4\text{"}
+    \]\imarks{6}
+\end{enumerate}
+
+
+\vspace{8cm}
+
+\item % Q6
+We have the function $f(x) = ax^{3}-x^{2}+bx + 4$, where $a$ and $b$ are constants.
+
+When $f(x)$ is divided by $(x + 4)$, the remainder is $- 108$.
+
+\begin{enumerate}
+    \item[(a)] Show that
+    \[
+    16a + b=24
+    \]\imarks{5}\\
+    Given also that $(2x - 1)$ is a factor of $f(x)$,
+    \item[(b)] find the value of $a$ and the value of $b$.\imarks{5}
+\end{enumerate}
+
+\vspace{8cm}
+
+\item % Q7
+
+\begin{enumerate}
+    \item The circle \(C_1\) has equation
+    \[
+    x^2 + y^2 + 8x - 10y = 29
+    \]
+    \begin{enumerate}
+        \item[(i)] Find the coordinates of the centre of \(C_1\).
+        \item[(ii)] Find the exact value of the radius of \(C_1\).
+    \end{enumerate}\imarks{6}
+    \item[(b)] The circle \(C_2\) has equation
+    \[
+    (x - 5)^2 + (y + 8)^2 = 52
+    \]\\
+    With detailed reasoning, prove that the circles \(C_1\) and \(C_2\) neither touch nor intersect.\imarks{4}
+\end{enumerate}
+
+\vspace{8cm}
+
+\item % Q8
+
+
+The points \( P \)\( (-11, 6) \),  \( Q \) \( (-3, 12) \) and \( R \)\( (-2, 9) \) lie on the circle \( C \).
+
+\begin{enumerate}
+    \item[(a)] 
+    \begin{enumerate}
+        \item[(i)] Find the coordinates of the centre of \( C \).
+        \item[(ii)] Find the radius of \( C \).
+    \end{enumerate}
+    \imarks{5}
+    
+    \item[(b)] Hence find an equation of \( C \). \imarks{2}
+    
+    \item[(c)] Find an equation of the tangent to \( C \) at the point \( Q \), giving your answer in the form \( ax + by + c = 0 \) where \( a \), \( b \) and \( c \) are integers to be found. \imarks{3}
+\end{enumerate}
+
+\vspace{7cm}
+
+\item % Q9
+
+
+\begin{enumerate}
+    \item[(a)] Given that
+    \[
+    2\log_3(x + 1) + \log_3(x - 1) = \log_3(2x + 3) + 1
+    \]
+    show that
+    \[
+    x^3 + x^2 - 7x - 10 = 0
+    \] \imarks{5}
+
+    \item[(b)] Given also that \(-2\) is a root of the equation
+    \[
+    x^3 + x^2 - 7x - 10 = 0
+    \]
+    \begin{enumerate}
+        \item[(i)] Use algebra to find the other two roots of the equation. \vspace{0.5cm} \imarks{3}
+        \item[(ii)] Hence solve
+        \[
+        2\log_3(x + 1) + \log_3(x - 1) = \log_3(2x + 3) + 1
+        \] \imarks{2}
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{10cm}
+
+\item % Q10
+\begin{enumerate}
+    \item[(a)] Find the first 4 terms, in ascending powers of $x$, of the binomial expansion of 
+    \[
+    \left(2 - \frac{x}{4}\right)^{10}
+    \]
+    giving each term in its simplest form. \imarks{3}
+
+    \item[(b)] Hence find the constant term in the series expansion of 
+    \[
+    \left(3 - \frac{1}{x}\right)^2 \left(2 - \frac{x}{4}\right)^{10}
+    \] \imarks{7}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

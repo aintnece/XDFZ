@@ -1,0 +1,200 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb}
+\usepackage{lipsum}
+\usepackage{caption}
+
+\graphicspath{
+  {../Assets/}
+  {../Media/}
+  {./Figures/}
+}
+
+\examtitle{Monthly Test, 2025-2026 T2}
+\examsubject{G10 A2 Math}{Mar 2026}{90 Minutes}{Shi Feng}
+\MarksBreakdown{}{}{}{}{76 \text{ Marks}}{76 \text{ Marks}}
+
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+\section*{Questions}
+
+\begin{enumerate}
+
+\item % Q1 (图8，5分)
+\begin{enumerate}
+    \item[(i)] A student states: “If $x$ and $y$ are irrational numbers, $x \neq y$, then $xy$ is also irrational.” Show, by counter example, that this statement is not always true. \imarks{1}
+    \item[(ii)] Prove, using algebra, that for all odd integers $n$, the value of the expression
+    \[
+    n^{3}+3n+2
+    \]
+    is always even but never a multiple of 4. \imarks{4}
+\end{enumerate}
+
+\newpage
+
+\item % Q2 (图5，6分)
+\begin{enumerate}
+    \item[(a)] Find the first 4 terms, in ascending powers of $x$, of the binomial expansion of 
+    \[
+    (1-4x)^7
+    \]
+    giving each term in simplest form. \imarks{4}
+    \item[(b)] In the series expansion of 
+    \[
+    (5+kx)(1-4x)^7
+    \]
+    where $k$ is a constant, the coefficient of the term in $x^{2}$ is 1316. Use the answer to part (a) to find the value of $k$. \imarks{2}
+\end{enumerate}
+
+\newpage
+
+\item % Q3 (图6，6分)
+\begin{enumerate}
+    \item[(a)] Show that the equation
+    \[
+    8\tan\theta = 3\cos\theta
+    \]
+    may be rewritten in the form
+    \[
+    3\sin^{2}\theta + 8\sin\theta - 3 = 0.
+    \] \imarks{3}
+    \item[(b)] Hence solve, for $0 \leq x \leq 90^{\circ}$, the equation
+    \[
+    8\tan 2x = 3\cos 2x,
+    \]
+    giving your answers to 2 decimal places. \imarks{3}
+\end{enumerate}
+
+\newpage
+
+\item % Q4 (图3，7分)
+The circle $C$ has equation
+\[
+x^{2}+y^{2}+6x-4y-14=0.
+\]
+\begin{enumerate}
+    \item[(a)] Find
+    \begin{enumerate}
+        \item[(i)] the coordinates of the centre of $C$,
+        \item[(ii)] the exact radius of $C$.
+    \end{enumerate} \imarks{3}
+    \item[(b)] The line with equation $y=k$, where $k$ is a constant, is a tangent to $C$. Find the possible values of $k$. \imarks{2}
+    \item[(c)] The line with equation $y=p$, where $p$ is a negative constant, is a chord of $C$. Given that the length of this chord is 4 units, find the value of $p$. \imarks{2}
+\end{enumerate}
+
+\newpage
+
+\item % Q6 (图2，10分)
+\begin{enumerate}
+    \item[(i)] An arithmetic series has first term $a$ and common difference $d$. Prove that the sum to $n$ terms of this series is
+    \[
+    \frac{n}{2}\{2a+(n-1)d\}.
+    \] \imarks{4}
+    \item[(ii)] A sequence $u_1, u_2, u_3, \dots$ is given by
+    \[
+    u_n = 5n + 3(-1)^n.
+    \]
+    Find the value of
+    \begin{enumerate}
+        \item[(a)] $u_5$,
+        \item[(b)] $\sum_{n=1}^{59} u_n$.
+    \end{enumerate} \imarks{6}
+\end{enumerate}
+
+\newpage
+
+\item % Q7 (图4，10分)
+\begin{enumerate}
+    \item[(a)] Given that
+    \[
+    3\log_3(2x-1) = 2 + \log_3(14x-25),
+    \]
+    show that
+    \[
+    2x^3 - 3x^2 - 30x + 56 = 0.
+    \] \imarks{5}
+    \item[(b)] Hence, using algebra and showing each step of your working, solve
+    \[
+    3\log_3(2x-1) = 2 + \log_3(14x-25).
+    \] \imarks{5}
+\end{enumerate}
+
+\newpage
+
+\item % Q8 (图7，10分)
+Kim starts working for a company.
+\begin{itemize}
+    \item In year 1 her annual salary will be £16200.
+    \item In year 10 her annual salary is predicted to be £31500.
+\end{itemize}
+Model A assumes that her annual salary will increase by the same amount each year.
+\begin{enumerate}
+    \item[(a)] According to model A, determine Kim's annual salary in year 2. \imarks{3}
+    \item[(b)] According to model B, determine Kim's annual salary in year 2. Give your answer to the nearest £10. \imarks{3}
+    \item[(c)] Calculate, according to the two models, the difference between the total amounts that Kim is predicted to earn from year 1 to year 10 inclusive. Give your answer to the nearest £10. \imarks{4}
+\end{enumerate}
+
+\newpage
+
+\item % Q9 (图9，10分)
+The function $f(x)$ is defined by
+\[
+f(x) = ax^{3} + bx^{2} + 5x - 3,
+\]
+where $a$ and $b$ are constants. Given that $(x+3)$ is a factor of $f(x)$,
+\begin{enumerate}
+    \item[(a)] show that
+    \[
+    b = 3a + 2.
+    \] \imarks{3}
+    \item[(b)] find the value of $a$ and the value of $b$. \imarks{3}
+    \item[(c)] Using algebra, find the quotient and the remainder when $f(x)$ is divided by $(x-2)$. \imarks{4}
+\end{enumerate}
+
+\newpage
+
+\item % Q10 (图10，12分)
+\[
+f(x) = kx^{3} - 15x^{2} - 32x - 12, \quad \text{where } k \text{ is a constant}.
+\]
+\begin{enumerate}
+    \item[(a)] Show that $k=9$. \imarks{4}
+    \item[(b)] Using algebra and showing each step of your working, fully factorise $f(x)$. \imarks{5}
+    \item[(c)] Solve, for $0 \leq \theta < 360^{\circ}$, the equation
+    \[
+    9\cos^{3}\theta - 15\cos^{2}\theta - 32\cos\theta - 12 = 0,
+    \]
+    giving your answers to one decimal place. \imarks{3}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

@@ -78,7 +78,7 @@
 \noindent Students must complete the assessments to the best of their ability. Any students found cheating during an exam will be given a zero and referred to the Principal for further disciplinary measures. Cheating is a serious offense.
 
 \medskip
-\noindent "Cheating" may include any of the following:
+\noindent ``Cheating" may include any of the following:
 \begin{itemize}[leftmargin=*]
     \item Having course papers, notes, unapproved data sheets or other course-related materials in the exam room without the expressed permission of the subject class teacher in charge of the exam.
     

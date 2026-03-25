@@ -1,0 +1,266 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{caption} % 图表标题支持
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+  {./midterm-g10-c1-fall-2025/} % 本试卷资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Final Exam, 2025-2026 T1}
+\examsubject{G10 C2 Math}{Jan 2026}{90 Minutes}{Shi Feng}
+\MarksBreakdown{2 \text{ Marks}}{10}{2 \text{ Marks}}{20}{40 \text{ Marks}}{100 \text{ Marks}}
+
+% 自定义命令用于处理记分内容
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+
+\section*{Multiple Choice Questions (10 questions, 2 marks each)}
+\begin{enumerate}
+    \item What is the period of the function $y = \tan \theta$?
+    \begin{enumerate}
+        \item $90^\circ$
+        \item $270^\circ$
+        \item $360^\circ$
+        \item $180^\circ$
+    \end{enumerate}
+    
+    \item The derivative of $f(x) = x^3$ is:
+    \begin{enumerate}
+        \item $x^2$
+        \item $3x^2$
+        \item $3x$
+        \item $x^3$
+    \end{enumerate}
+    
+    \item The indefinite integral $\int x^2  dx$ equals:
+    \begin{enumerate}
+        \item $x^3 + C$
+        \item $2x + C$
+        \item $\frac{x^3}{3} + C$
+        \item $\frac{x^2}{2} + C$
+    \end{enumerate}
+    
+    \item Which of the following is the correct factorization of $x^2 - 5x + 6$?
+    \begin{enumerate}
+        \item $(x-2)(x-3)$
+        \item $(x+2)(x+3)$
+        \item $(x-1)(x-6)$
+        \item $(x+1)(x+6)$
+    \end{enumerate}
+    
+    \item The equation of a circle with center $(2, -3)$ and radius 5 is:
+    \begin{enumerate}
+        \item $(x+2)^2 + (y-3)^2 = 25$
+        \item $(x-2)^2 + (y+3)^2 = 5$
+        \item $(x+2)^2 + (y-3)^2 = 5$
+        \item $(x-2)^2 + (y+3)^2 = 25$
+    \end{enumerate}
+    
+    \item The value of $\log_{10} 100$ is:
+    \begin{enumerate}
+        \item 1
+        \item 2
+        \item 10
+        \item 100
+    \end{enumerate}
+    
+    \item The gradient of the curve $y = x^2$ at $x=1$ is:
+    \begin{enumerate}
+        \item 2
+        \item 0
+        \item 1
+        \item 4
+    \end{enumerate}
+    
+    \item The indefinite integral $\int 3x  dx$ equals:
+    \begin{enumerate}
+        \item $3x^2 + C$
+        \item $3x + C$
+        \item $\frac{3x^2}{2} + C$
+        \item $\frac{x^2}{2} + C$
+    \end{enumerate}
+    
+    \item The midpoint of the line segment joining points $(1, 2)$ and $(5, 8)$ is:
+    \begin{enumerate}
+        \item $(4, 5)$
+        \item $(3, 5)$
+        \item $(3, 4)$
+        \item $(4, 4)$
+    \end{enumerate}
+    
+    \item The function $y = e^x$ is:
+    \begin{enumerate}
+        \item Always increasing
+        \item Always decreasing
+        \item Constant
+        \item Periodic
+    \end{enumerate}
+\end{enumerate}
+
+\section*{Short Answer Questions (20 questions, 2 marks each)}
+
+\subsection*{True/False}
+State whether each statement is True or False.
+
+\section*{True or False Questions (10 questions)}
+\begin{enumerate}
+    \item The graph of $y = \cos \theta$ has a period of $360^\circ$. \hfill True \quad False
+    
+    \item The derivative of a constant function is zero. \hfill True \quad False
+    
+    \item The integral of $x^n$ with respect to $x$ is $\frac{x^{n+1}}{n+1} + C$ for all real $n$. \hfill True \quad False
+    
+    \item The line $y = mx + c$ always has a gradient of $m$. \hfill True \quad False
+    
+    \item The circle equation $(x-a)^2 + (y-b)^2 = r^2$ has center $(a, b)$. \hfill True \quad False
+    
+    \item $\log_a (xy) = \log_a x + \log_a y$ for $a > 0$, $a \neq 1$. \hfill True \quad False
+    
+    \item The tangent to a curve at a point is perpendicular to the radius at that point. \hfill True \quad False
+    
+    \item The function $y = \ln x$ is defined for all real $x$. \hfill True \quad False
+    
+    \item For any positive number $a$, $a^0 = 1$. \hfill True \quad False
+    
+    \item The perpendicular bisector of a chord passes through the center of the circle. \hfill True \quad False
+\end{enumerate}
+
+\section*{Fill in the Blanks (10 questions)}
+\begin{enumerate}
+    \item The derivative of $f(x) = 5x^4$ is \underline{\hspace{2cm}}.
+    
+    \item The  integral $\int 3  dx$ equals \underline{\hspace{2cm}}.
+    
+    \item The solution to $\log_2 x = 3$ is $x =$ \underline{\hspace{2cm}}.
+    
+    \item The gradient of the line passing through $(0,0)$ and $(3,6)$ is \underline{\hspace{2cm}}.
+    
+    \item The value of $\sin 90^\circ$ is \underline{\hspace{2cm}}.
+    
+    \item The function $y = \tan \theta$ has vertical asymptotes at \underline{\hspace{2cm}} degrees.
+    
+    \item The circle with centre (2,1) and radius 4 has an equation of \underline{\hspace{2cm}}.
+    
+    \item The area of a triangle with base $b$ and height $h$ is \underline{\hspace{2cm}}.
+    
+   \item The distance between points $(2,3)$ and $(5,7)$ is \underline{\hspace{2cm}}.
+    
+    \item The exponential function $y = a^x$ has a base that must be \underline{\hspace{2cm}}.
+\end{enumerate}
+
+\newpage
+
+\section*{Long Answer Questions}
+
+\begin{enumerate}
+
+\item % Q1
+\begin{enumerate}
+        \item[(a)] Find the equation of the tangent to the curve with equation
+        \[
+        y = \frac{1}{4}x^3 - 8x^{-\frac{1}{2}}
+        \]
+        at the point \( P(4, 12) \). Give your answer in the form \( ax + by + c = 0 \) where \( a \), \( b \) and \( c \) are integers. \imarks{5}
+        
+        The curve with equation \( y = f(x) \) also passes through the point \( P(4, 12) \). Given that
+        \[
+        f'(x) = \frac{1}{4}x^3 - 8x^{-\frac{1}{2}}
+        \]
+        
+        \item[(b)] Find \( f(x) \) giving the coefficients in simplest form. \imarks{5}
+    \end{enumerate}
+
+\vspace{8cm}
+
+\item % Q2
+
+Given the function \( f(x) = (x - 3)(3x^2 + x + a) - 35 \) where \( a \) is a constant:
+          \begin{enumerate}
+              \item State the remainder when \( f(x) \) is divided by \( (x - 3) \). \imarks{2}
+              \item Given that \( (3x - 2) \) is a factor of \( f(x) \), show that \( a = -17 \). \imarks{3}
+              \item Using algebra and showing each step of your working, fully factorise \( f(x) \). \imarks{5}
+          \end{enumerate}
+
+\vspace{8cm}
+
+\item % Q3
+\begin{enumerate}
+    \item The circle \(C_1\) has equation
+    \[
+    x^2 + y^2 + 8x - 10y = 29
+    \]
+    \begin{enumerate}
+        \item[(i)] Find the coordinates of the centre of \(C_1\).
+        \item[(ii)] Find the exact value of the radius of \(C_1\).
+    \end{enumerate}\imarks{6}
+    \item[(b)] The circle \(C_2\) has equation
+    \[
+    (x - 5)^2 + (y + 8)^2 = 52
+    \]\\
+    With detailed reasoning, prove that the circles \(C_1\) and \(C_2\) neither touch nor intersect.\imarks{4}
+\end{enumerate}
+
+\vspace{6cm}
+
+\item % Q4
+
+
+\begin{enumerate}
+    \item[(a)] Given that
+    \[
+    2\log_3(x + 1) + \log_3(x - 1) = \log_3(2x + 3) + 1
+    \]
+    show that
+    \[
+    x^3 + x^2 - 7x - 10 = 0
+    \] \imarks{5}
+
+    \item[(b)] Given also that \(-2\) is a root of the equation
+    \[
+    x^3 + x^2 - 7x - 10 = 0
+    \]
+    \begin{enumerate}
+        \item[(i)] Use algebra to find the other two roots of the equation. \vspace{0.5cm} \imarks{3}
+        \item[(ii)] Hence solve
+        \[
+        2\log_3(x + 1) + \log_3(x - 1) = \log_3(2x + 3) + 1
+        \] \imarks{2}
+    \end{enumerate}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
