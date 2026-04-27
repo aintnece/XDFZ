@@ -1,0 +1,226 @@
+\documentclass{../Templates/sbs-exam}
+
+\usepackage{ulem}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{graphicx} % 图形支持包（必须）
+\usepackage{fancyhdr} % 页眉控制包（必须）
+\usepackage{titling} % 提供高级标题控制
+\usepackage{lmodern} % 现代字体支持
+\usepackage{amsmath, amssymb} % 数学符号和公式支持
+\usepackage{lipsum} % 用于生成示例文本
+\usepackage{caption} % 图表标题支持
+
+% ===== 资源路径配置 =====
+\graphicspath{
+  {../Assets/}     % 公共资源
+  {../Media/}      % 试卷专用资源
+  {./Figures/} % 本试卷资源
+}
+
+% ===== 考试元数据配置 =====
+\examtitle{Midterm, 2025-2026 T2}
+\examsubject{G10 A3 Mathematics}{Apr 2026}{90 Minutes}{Shi Feng}
+\MarksBreakdown{2 \text{ Marks}}{10}{2 \text{ Marks}}{20}{40 \text{ Marks}}{100 \text{ Marks}}
+
+% 自定义命令用于处理记分内容
+\newcommand{\imarks}[1]{\hfill \textbf{(#1 marks)}}
+\newcommand{\totalmarks}[1]{\par\noindent\hfill \textbf{(Total for question = #1 marks)}\par}
+
+\begin{document}
+
+\maketitle
+
+\examnotice
+
+\makemarksheet
+
+\examtools
+
+\newpage
+
+\makeatletter
+
+\section*{Multiple Choice Questions (10 questions, 2 marks each)}
+\begin{enumerate}
+    \item Simplify $\frac{x^2 + 5x + 6}{x+2}$.
+    \begin{enumerate}
+        \item $x+3$
+        \item $x-3$
+        \item $x+2$
+        \item $x-2$
+    \end{enumerate}
+    
+    \item The remainder when $x^3 - 2x^2 + 4x - 5$ is divided by $(x-1)$ is
+    \begin{enumerate}
+        \item $-2$
+        \item $2$
+        \item $4$
+        \item $0$
+    \end{enumerate}
+    
+    \item Which of the following is a factor of $x^3 - 3x^2 - 4x + 12$?
+    \begin{enumerate}
+        \item $x+2$
+        \item $x-2$
+        \item $x+3$
+        \item $x-4$
+    \end{enumerate}
+    
+    \item The midpoint of the line segment joining $(-1,4)$ and $(5, -2)$ is
+    \begin{enumerate}
+        \item $(2,1)$
+        \item $(3,1)$
+        \item $(2,3)$
+        \item $(4,2)$
+    \end{enumerate}
+    
+    \item The equation of the circle with centre $(2,-3)$ and radius $4$ is
+    \begin{enumerate}
+        \item $(x-2)^2 + (y+3)^2 = 4$
+        \item $(x+2)^2 + (y-3)^2 = 16$
+        \item $(x-2)^2 + (y+3)^2 = 16$
+        \item $(x+2)^2 + (y-3)^2 = 4$
+    \end{enumerate}
+    
+    \item $\log_3 81$ is equal to
+    \begin{enumerate}
+        \item $3$
+        \item $4$
+        \item $5$
+        \item $9$
+    \end{enumerate}
+    
+    \item Solve $2^{x} = 16$.
+    \begin{enumerate}
+        \item $2$
+        \item $3$
+        \item $4$
+        \item $8$
+    \end{enumerate}
+    
+    \item The discriminant of the quadratic $2x^2 - 4x + 5 = 0$ is
+    \begin{enumerate}
+        \item $-24$
+        \item $24$
+        \item $56$
+        \item $-56$
+    \end{enumerate}
+    
+    \item The solutions to $x^2 - 5x + 6 = 0$ are
+    \begin{enumerate}
+        \item $2$ and $3$
+        \item $-2$ and $-3$
+        \item $1$ and $6$
+        \item $-1$ and $-6$
+    \end{enumerate}
+    
+    \item The gradient of the line perpendicular to $y = 3x - 2$ is
+    \begin{enumerate}
+        \item $3$
+        \item $-3$
+        \item $\frac{1}{3}$
+        \item $-\frac{1}{3}$
+    \end{enumerate}
+\end{enumerate}
+
+\section*{True or False Questions (10 questions, 2 marks each)}
+State whether each statement is True or False.
+
+\begin{enumerate}
+    \item The factor theorem states that if $f(p)=0$ then $(x-p)$ is a factor of $f(x)$. \hfill True \quad False
+    
+    \item For the circle $(x-a)^2 + (y-b)^2 = r^2$, the centre is $(a,b)$ and radius is $r$. \hfill True \quad False
+    
+    \item $\log_a x + \log_a y = \log_a (x+y)$. \hfill True \quad False
+    
+    \item The quadratic equation $x^2 + 4x + 5 = 0$ has two distinct real roots. \hfill True \quad False
+    
+    \item The remainder theorem says that when $f(x)$ is divided by $(ax-b)$, the remainder is $f\left(\frac{b}{a}\right)$. \hfill True \quad False
+    
+    \item The graph of $y = a^x$ with $a>1$ is a decreasing function. \hfill True \quad False
+    
+    \item The perpendicular bisector of a chord of a circle always passes through the centre. \hfill True \quad False
+    
+    \item $\log_a a = 0$ for any $a>0$, $a\neq 1$. \hfill True \quad False
+    
+    \item Completing the square for $x^2+6x$ gives $(x+3)^2 - 9$. \hfill True \quad False
+    
+    \item The line $y = 2x + 1$ is a tangent to the circle $(x-1)^2 + y^2 = 5$. \hfill True \quad False
+\end{enumerate}
+
+\section*{Fill in the Blanks (10 questions, 2 marks each)}
+Complete each statement with the correct answer.
+
+\begin{enumerate}
+    \item When simplifying the algebraic fraction $\dfrac{x^2+3x+2}{x+1}$, after cancelling common factors, the result is \underline{\hspace{4cm}}.
+    
+    \item The remainder when $x^3-2x^2+4x-5$ is divided by $(x-2)$ is \underline{\hspace{4cm}}.
+    
+    \item If $(x-3)$ is a factor of $x^3+ax^2-4x-3$, then the value of $a$ is \underline{\hspace{4cm}}.
+    
+    \item The midpoint of the line segment joining $A(-3,7)$ and $B(5,-1)$ is \underline{\hspace{4cm}}.
+    
+    \item The equation of the circle with centre $(2,-5)$ and radius $3$ is $(x-2)^2+(y+5)^2 = \underline{\hspace{4cm}}$.
+    
+    \item The value of $\log_5 125$ is \underline{\hspace{4cm}}.
+    
+    \item Solve $3^{2x-1}=27$; then $x = \underline{\hspace{4cm}}$.
+    
+    \item The discriminant of the quadratic equation $2x^2-3x+4=0$ is \underline{\hspace{4cm}}.
+    
+    \item Completing the square for $x^2+8x$ gives $(x+4)^2 - \underline{\hspace{4cm}}$.
+    
+    \item A circle has equation $x^2+y^2-6x+4y-12=0$. The $x$-coordinate of its centre is \underline{\hspace{4cm}}.
+\end{enumerate}
+
+\newpage
+
+\section*{Long Answer Questions}
+
+\begin{enumerate}
+
+\item % Q1: Algebraic methods (polynomial division and factor theorem)
+The polynomial $f(x) = 2x^3 - 5x^2 - 4x + 3$.
+\begin{enumerate}
+    \item Use the factor theorem to show that $(x-3)$ is a factor of $f(x)$. \imarks{3}
+    \item Hence factorise $f(x)$ completely into linear factors. \imarks{4}
+    \item Write down all the real roots of the equation $f(x)=0$. \imarks{3}
+\end{enumerate}
+\vspace{8cm}
+
+\item % Q2: Quadratics (solving, discriminant, completing the square)
+Consider the quadratic function $f(x) = x^2 - 6x + 5$.
+\begin{enumerate}
+    \item Solve the equation $f(x)=0$. \imarks{2}
+    \item Write $f(x)$ in the form $(x-p)^2 + q$. \imarks{3}
+    \item Hence state the minimum value of $f(x)$ and the value of $x$ at which it occurs. \imarks{2}
+    \item Find the discriminant of $f(x)$ and explain what it tells you about the roots. \imarks{3}
+\end{enumerate}
+\vspace{8cm}
+
+\item % Q3: Coordinate geometry (circle and tangent) - CORRECTED
+The circle $C$ has equation $(x-1)^2 + (y+4)^2 = 20$.
+\begin{enumerate}
+    \item Write down the centre and radius of $C$. \imarks{3}
+    \item Verify that the point $P(3,0)$ lies on $C$. \imarks{3}
+    \item Find the equation of the tangent to $C$ at $P$. Give your answer in the form $ax+by+c=0$, where $a$, $b$ and $c$ are integers. \imarks{4}
+\end{enumerate}
+\vspace{8cm}
+
+\item % Q4: Exponentials and logarithms (solving equations)
+\begin{enumerate}
+    \item Solve $5^{2x-1} = 125$. \imarks{3}
+    \item Solve $\log_2(x+1) + \log_2(x-1) = 3$. \imarks{4}
+    \item Given that $\log_a 9 = 2$, find the value of $a$. \imarks{3}
+\end{enumerate}
+\vspace{6cm}
+
+\end{enumerate}
+
+\end{document}
